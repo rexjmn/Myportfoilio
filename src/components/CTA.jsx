@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 
-const CTA = () => {
-=======
 import {useGSAP} from "@gsap/react"
 import gsap from "gsap";
 const CTA = () => {
@@ -32,18 +29,16 @@ const timeline = gsap.timeline({
   })
 
 
->>>>>>> 83371ca (new update)
+
   return (
     <section className='cta'>
       <p className='cta-text'>
         Avez-vous un projet? <br className='sm:block hidden' />
         Nous pouvons le construire ensemble!
       </p>
-<<<<<<< HEAD
-      <Link to='/contact' className='btn'>
-=======
+
       <Link to='/contact' className='btn' id='btn'>
->>>>>>> 83371ca (new update)
+
         Contact
       </Link>
     </section>

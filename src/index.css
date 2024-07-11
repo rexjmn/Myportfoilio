@@ -8,12 +8,11 @@
   --blue-rgb: 237 245 255;
   --green-rgb: 125 161 35;
 }
-<<<<<<< HEAD
-=======
+
 .final .for, .final .gsap {
   display: block;
 }
->>>>>>> 83371ca (new update)
+
 
 body {
   font-family: "Work Sans", sans-serif;
