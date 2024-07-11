@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { meta, shopify, starbucks, tesla } from "../assets/images";
+=======
+import { meta, CNXC, harrynDavid, tp } from "../assets/images";
+>>>>>>> 83371ca (new update)
 import {
     car,
     contact,
@@ -111,6 +115,7 @@ export const skills = [
 
 export const experiences = [
     {
+<<<<<<< HEAD
         title: "React.js Developer",
         company_name: "Starbucks",
         icon: starbucks,
@@ -162,6 +167,54 @@ export const experiences = [
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
+=======
+        title: "Tech Support",
+        company_name: "Teleperformance",
+        icon: tp,
+        iconBg: "#accbe1",
+        date: "19/10/2018 - 31/12/2018",
+        points: [
+            "Fournir un support technique de haute qualité en anglais à une clientèle internationale.",
+            "Résoudre efficacement les problèmes techniques des clients liés aux services et produits AT&T.",
+            "Atteindre et surpasser les objectifs de satisfaction client mensuels.", 
+            "Maintenir une communication claire et professionnelle, renforçant la fidélité des clients.", 
+            "Collaborer avec les équipes internes pour assurer une résolution rapide et efficace des incidents.", 
+            "Améliorer continuellement les compétences en communication et la maîtrise de l'anglais."
+        ],
+    },
+    {
+        title: "Télèconseiller commercial et service client",
+        company_name: "Hary&David",
+        icon: harrynDavid,
+        iconBg: "#fbc3bc",
+        date: "16/10/2017 - 18/01/2018",
+        points: [
+            "Analyser les besoins des clients pour proposer des solutions personnalisées et adaptées.",
+"Utiliser des outils CRM pour suivre et gérer les interactions avec les clients de manière efficace.",
+"Participer à des formations régulières pour rester informé des nouvelles pratiques et des produits.",
+"Développer des stratégies pour augmenter la satisfaction et la rétention des clients.",
+"Préparer des rapports détaillés sur les performances de service et les retours clients pour les équipes de gestion.",
+"Assurer une veille concurrentielle pour identifier les opportunités d'amélioration et d'innovation.",
+"Encourager une culture de service client orientée vers l'excellence et la satisfaction maximale."
+        ],
+    },
+    {
+        title: "télèconseiller reservation et service client",
+        company_name: "Concentrix",
+        icon: CNXC,
+        iconBg: "#b7e4c7",
+        date: "Jan 2022 - Jan 2023",
+        points: [
+            "Fournir un service client exceptionnel en anglais à une clientèle internationale.",
+"Gérer efficacement les réservations, modifications et annulations de séjours.",
+"Atteindre et dépasser les objectifs de vente mensuels.",
+"Renforcer la fidélité des clients grâce à une communication claire et professionnelle.",
+"Collaborer avec les équipes internes pour résoudre rapidement les problèmes.",
+"Améliorer continuellement les compétences en communication et la maîtrise de l'anglais."
+        ],
+    },
+    
+>>>>>>> 83371ca (new update)
 ];
 
 export const socialLinks = [
@@ -173,12 +226,20 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
+<<<<<<< HEAD
         link: 'https://github.com/YourGitHubUsername',
+=======
+        link: 'https://github.com/rexjmn',
+>>>>>>> 83371ca (new update)
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
+<<<<<<< HEAD
         link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+=======
+        link: 'www.linkedin.com/in/rene-jimenez-mayorga',
+>>>>>>> 83371ca (new update)
     }
 ];
 
@@ -186,9 +247,15 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
+<<<<<<< HEAD
         name: 'Amazon Price Tracker',
         description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
         link: 'https://github.com/adrianhajdin/pricewise',
+=======
+        name: 'Restaurant SushiMan',
+        description: 'deve.',
+        link: '',
+>>>>>>> 83371ca (new update)
     },
     {
         iconUrl: threads,

@@ -16,7 +16,16 @@ export default {
         },
         blue: {
           500: "#2b77e7"
+<<<<<<< HEAD
         }
+=======
+        },
+        // Custom colors for your component
+        'shockingly-green': '#a0f900',
+        'lt-green': '#c5f8a1',
+        'lilac': '#d0a1f5',
+        'surface-white': '#ffffff'
+>>>>>>> 83371ca (new update)
       },
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],
@@ -28,5 +37,9 @@ export default {
     },
   },
   plugins: [],
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> 83371ca (new update)

@@ -10,7 +10,7 @@ import {
   import gsap from "gsap";
   import { useRef } from "react";
   import { rene } from "../assets/images";
-
+  
   
   gsap.registerPlugin(ScrollTrigger)
   
@@ -69,56 +69,41 @@ import {
   
   timeline.fromTo('#black-box', {
     x: 0,
-    opacity: 0
-   
+    opacity: 0,
+   ease: 'bounce-out',
+   scale: 0.5
   
   },{
     x: 350,
     opacity: 1,
-    rotation: 360,
+    
     borderRadius:'100%',
     duration: 2,
-    ease: 'bounce.out'
+    scale: 1,
+    ease: ''
   }
   )
   
-  timeline.to('#black-box', {
-    y: 100,
-    scale: 0.5,
-    rotation: 360,
-    duration: 2,
-    ease: 'bounce',
-  })
+  // timeline.to('#black-box', {
+  //   y: 100,
+  //   scale: 0.5,
+  //   rotation: 360,
+  //   duration: 2,
+  //   ease: 'bounce.out',
+  // })
   
   timeline.to('#black-box', {
     x: 500,
-    y: 0,
-    scale: 1.5,
-    rotation: 360,
-    borderRadius:'10',
+    y: 10,
+    scale: 1,
     duration: 2,
-    ease: 'bounce.inOut'
+  opacity: 0,
+  ease:'back.inOut'
+   
   
   }
   )
   
-  timeline.fromTo('#box2', {
-    borderRadius:'100%',
-    y: 0,
-    x: 400,
-    
-  },{
-    borderRadius: '100%',
-    y: 300,
-    x: 200,
-    
-    
-    duration: 1,
-    yoyo: true,
-    ease: 'bounce'
-  }
-  
-  )
   
   
     gsap.set("#head-text .char", { opacity: 0, y: 50 });
@@ -167,24 +152,22 @@ import {
           👋
         </h1>
   
-        <div className="m-10 w-40 h-40">
+        <div className="m-10 w-40 h-40 object-contain">
         <div  id="black-box"  className="rounded-full" >
-          <img src={rene} alt="" />
-          <h3 className="text-white">Call Me</h3>
+          <img src={rene} alt=""  className="rounded-[100%]" />
+          
         </div>
-        <div id="box2" className="h-10 w-10 bg-purple-400">
-  </div>
+       
   </div>
   
-        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+        <div className='p-10 flex flex-col gap-3 text-slate-500'>
           <p id="para">
           Je suis étudiant en développement web à la recherche d'une alternance. Originaire du Salvador, je parle couramment anglais, français et espagnol. Déterminé, autodidacte et créatif, je suis prêt à apporter ma passion et mes compétences à votre équipe.
           </p>
         </div>
   
   
-  
-  
+
   
         <div className='py-10 flex flex-col'>
           <h3 className='subhead-text'>My Skills</h3>
@@ -211,11 +194,10 @@ import {
   
   
         <div className='py-16'>
-          <h3 className='subhead-text'>Work Experience.</h3>
+          <h3 className='subhead-text'>Experience Professionnelle.</h3>
           <div className='mt-5 flex flex-col gap-3 text-slate-500'>
             <p>
-              I've worked with all sorts of companies, leveling up my skills and
-              teaming up with smart people. Here's the rundown:
+            J'ai travaillé avec toutes sortes d'entreprises, améliorant mes compétences et collaborant avec des personnes intelligentes. Voici un aperçu :
             </p>
           </div>
   
