@@ -23,7 +23,9 @@ import {
     snapgram,
     summiz,
     tailwindcss,
- 
+    three,
+    gsap,
+    vite,
     typescript,
     sushi,
     calculator,
@@ -68,13 +70,13 @@ export const skills = [
         type: "Database",
     },
     {
-        imageUrl: motion,
-        name: "Motion",
+        imageUrl: three,
+        name: "Three.js",
         type: "Animation",
     },
     {
-        imageUrl: mui,
-        name: "Material-UI",
+        imageUrl: gsap,
+        name: "Gsap",
         type: "Frontend",
     },
     {
@@ -93,9 +95,9 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
+        imageUrl: vite,
+        name: "vite",
+        type: "Frontend",
     },
     {
         imageUrl: sass,

@@ -30,6 +30,9 @@ import sushi from './sushi.svg'
 import calculator from './calculator.svg'
 import task from './task.svg'
 import adventure from './adventure.svg'
+import gsap from "./gsap.svg";
+import three from "./three.svg";
+import vite from "./vite.svg";
 
 export {
     css,
@@ -63,5 +66,8 @@ export {
     sushi,
     calculator,
     task,
-    adventure
+    adventure,
+    gsap,    
+    three,
+    vite
 }
