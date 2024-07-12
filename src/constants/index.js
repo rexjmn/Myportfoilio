@@ -17,15 +17,18 @@ import {
     mui,
     nextjs,
     nodejs,
-    pricewise,
     react,
     redux,
     sass,
     snapgram,
     summiz,
     tailwindcss,
-    threads,
-    typescript
+ 
+    typescript,
+    sushi,
+    calculator,
+    task,
+    adventure
 } from "../assets/icons";
 
 export const skills = [
@@ -177,55 +180,43 @@ export const socialLinks = [
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'www.linkedin.com/in/rene-jimenez-mayorga',
+        link: "https://www.linkedin.com/in/rene-jimenez-mayorga/",
 
     }
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
+        iconUrl: sushi,
         theme: 'btn-back-red',
-
-
         name: 'Restaurant SushiMan',
-        description: 'deve.',
-        link: '',
+        description: "Découvrez mon site web interactif, développé avec Vite, HTML, et CSS, et hébergé sur Vercel. Profitez d'animations fluides et d'une performance optimale.",
+        link: 'https://resto-sushi.vercel.app/',
+        lien: 'https://github.com/rexjmn/resto-sushi'
 
     },
     {
-        iconUrl: threads,
+        iconUrl: task,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Javascript To-Do List',
+        description: "J'ai créé une to-do list très cool, inspirée du monde du gaming et du cyberpunk. Elle combine une esthétique unique avec des fonctionnalités pratiques, offrant une expérience utilisateur immersive et efficace.",
+        link: 'https://rexjmn.github.io/toDo/',
+        lien: 'https://github.com/rexjmn/toDo'
     },
     {
-        iconUrl: car,
+        iconUrl: calculator,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Calculator',
+        description: "J'ai développé une calculatrice en JavaScript avec un design cool, stylisé grâce à Sass. Elle offre des fonctionnalités avancées et une expérience utilisateur agréable, démontrant mes compétences en programmation et en design.",
+        link: 'https://rexjmn.github.io/calculatrice/',
+        lien: 'https://github.com/rexjmn/calculatrice'
     },
     {
-        iconUrl: snapgram,
+        iconUrl: adventure,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'Outdoor Adventures',
+        description: "Ce projet est mon tout premier sur HTML et CSS, un site avec une interface responsive et un design minimaliste. Il est concu pour offrir une expérience utilisateur responsive.", 
+        link: 'https://rexjmn.github.io/projetbootcamp/',
+        lien: 'https://github.com/rexjmn/projetbootcamp'
     }
 ];
