@@ -74,7 +74,7 @@ import {
    scale: 0.5
   
   },{
-    x: 350,
+    x: 50,
     opacity: 1,
     
     borderRadius:'100%',
@@ -93,7 +93,7 @@ import {
   // })
   
   timeline.to('#black-box', {
-    x: 500,
+    x: 200,
     y: 10,
     scale: 1,
     duration: 2,
@@ -152,7 +152,7 @@ import {
           👋
         </h1>
   
-        <div className="m-10 w-40 h-40 object-contain">
+        <div className="m-10 w-40 h-40 object-contain justify-center items-start">
         <div  id="black-box"  className="rounded-full" >
           <img src={rene} alt=""  className="rounded-[100%]" />
           
