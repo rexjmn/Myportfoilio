@@ -31,9 +31,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "René Jimémez",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "rexmayorga97@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -43,7 +43,7 @@ const Contact = () => {
           setLoading(false);
           showAlert({
             show: true,
-            text: "Thank you for your message 😃",
+            text: "Merci pour votre message 😃",
             type: "success",
           });
 
@@ -64,7 +64,7 @@ const Contact = () => {
 
           showAlert({
             show: true,
-            text: "I didn't receive your message 😢",
+            text: "J'ai pas reçu votre message 😢",
             type: "danger",
           });
         }
