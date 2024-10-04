@@ -1,6 +1,7 @@
 
 import { meta, CNXC, harrynDavid, tp } from "../assets/images";
 
+
 import {
     car,
     contact,
@@ -30,7 +31,8 @@ import {
     sushi,
     calculator,
     task,
-    adventure
+    adventure,
+    favicon,
 } from "../assets/icons";
 
 export const skills = [
@@ -189,6 +191,15 @@ export const socialLinks = [
 
 export const projects = [
     {
+        iconUrl: favicon,
+        theme: 'btn-back-pink',
+        name: 'Portfolio',
+        description: `Ce projet a été conçu avec des technologies modernes telles que Three.js, drei, Fiber React, Vite, et GSAP. J’ai créé une expérience interactive mettant en scène une île flottante habitée par des renards et un avion qui parcourt l'île lorsque l'on clique dessus. De plus, un oiseau phénix ajoute une touche dynamique à cette scène immersive. 
+        Pour réaliser ce projet, j'ai téléchargé des modèles 3D depuis Sketchfab, que j'ai intégrés dans mon application à l'aide de Three.js, permettant ainsi l'utilisation de WebGL pour des rendus graphiques avancés. Les animations sont fluides grâce à GSAP, ce qui améliore l'expérience utilisateur.`,
+        link: 'https://github.com/rexjmn/Myportfoilio',
+        lien: 'https://myportfoilionn.onrender.com/'
+    },
+    {
         iconUrl: sushi,
         theme: 'btn-back-red',
         name: 'Restaurant SushiMan',
@@ -220,5 +231,6 @@ export const projects = [
         description: "Ce projet est mon tout premier sur HTML et CSS, un site avec une interface responsive et un design minimaliste. Il est concu pour offrir une expérience utilisateur responsive.", 
         link: 'https://rexjmn.github.io/projetbootcamp/',
         lien: 'https://github.com/rexjmn/projetbootcamp'
-    }
+    },
+
 ];

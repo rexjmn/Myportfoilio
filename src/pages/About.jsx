@@ -78,9 +78,15 @@ import {
     opacity: 1,
     
     borderRadius:'100%',
-    duration: 2,
+    duration: 1.5,
     scale: 1,
     ease: ''
+  },
+  { x: 100,
+    scale: 1.,
+    borderRadius:'100%',
+    duration: 10,
+    ease: "bounce.in",
   }
   )
   
@@ -92,17 +98,9 @@ import {
   //   ease: 'bounce.out',
   // })
   
-  timeline.to('#black-box', {
-    x: 200,
-    y: 10,
-    scale: 1,
-    duration: 2,
-  opacity: 0,
-  ease:'back.inOut'
+  
    
   
-  }
-  )
   
   
   
@@ -151,19 +149,25 @@ import {
           </span>{" "}
           👋
         </h1>
-  
+        
+        Passionné par le développement web, je suis originaire du Salvador et je suis toujours prêt à relever de nouveaux défis. J'ai récemment terminé un stage chez Syclope, où j'ai eu l'opportunité de développer un outil pour suivre la qualité de l'eau dans les piscines des grandes entreprises. Cette expérience m'a non seulement permis de renforcer mes compétences techniques, mais aussi de mieux comprendre les besoins du secteur. <br /> <br />
+        Actuellement, je continue à me former et à explorer de nouvelles technologies comme JavaScript, Node.js, Express.js, MongoDB, et React. Je travaille aussi sur un projet de e-commerce, ce qui me permet d'améliorer mes compétences en Typescript et en gestion de projets. <br /> <br />
+        Je parle couramment français, anglais, et espagnol, ce qui me permet d'échanger facilement avec des personnes de différents horizons. Mon objectif est de rester en phase avec les dernières innovations et de contribuer à des projets qui ont un impact positif. <br /> <br />
+        Merci d'avoir pris le temps de visiter mon portfolio ! Si vous souhaitez discuter d'un projet ou simplement échanger des idées, n'hésitez pas à me contacter.
         <div className="m-10 w-40 h-40 object-contain justify-center items-start">
         <div  id="black-box"  className="rounded-full" >
           <img src={rene} alt=""  className="rounded-[100%]" />
           
         </div>
+
+
+  
        
   </div>
   
         <div className='p-10 flex flex-col gap-3 text-slate-500'>
           <p id="para">
-          Je suis étudiant en développement web à la recherche d'une alternance. Originaire du Salvador, je parle couramment anglais, français et espagnol. Déterminé, autodidacte et créatif, je suis prêt à apporter ma passion et mes compétences à votre équipe.
-          </p>
+                    </p>
         </div>
   
   

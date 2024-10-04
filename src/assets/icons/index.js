@@ -33,6 +33,7 @@ import adventure from './adventure.svg'
 import gsap from "./gsap.svg";
 import three from "./three.svg";
 import vite from "./vite.svg";
+import favicon from "./favicon.ico";
 
 export {
     css,
@@ -69,5 +70,6 @@ export {
     adventure,
     gsap,    
     three,
-    vite
+    vite,
+    favicon
 }
