@@ -15,7 +15,7 @@ const Projects = () => {
       </h1>
 
       <p className='text-slate-500 mt-2 leading-relaxed'>
-      J'ai développé des projets pour aprofondier mes connaissances en programmation et en design, j'ai passé des heures en travaillant sur des sites web interactifs.
+      J'ai développé des projets pour approfondir mes connaissances en programmation et en design, j'ai passé des heures en travaillant sur des sites web interactifs.
       </p>
 
       <div className='flex flex-wrap my-20 gap-16'>

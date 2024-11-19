@@ -1,5 +1,5 @@
 
-import { meta, CNXC, harrynDavid, tp } from "../assets/images";
+import { meta, CNXC, harrynDavid, tp,  debian, dovecot, Nginx1, Php, postfix, Sql, Vps, Webpack, Angel } from "../assets/images";
 
 
 import {
@@ -115,7 +115,46 @@ export const skills = [
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
-    }
+    },
+    {
+        imageUrl: Webpack,
+        name: "Webpack",
+        type: "Fullstack",
+    },
+    {
+        imageUrl: debian,
+        name: "Debian",
+        type: "OS Server",
+    },
+    {
+        imageUrl: postfix,
+        name: "Postfix",
+        type: "Backend",
+    },
+    {
+        imageUrl: dovecot,
+        name: "Dovecot",
+        type: "Backend",
+    },
+    {
+        imageUrl: Nginx1,
+        name: "Nginx",
+        type: "Backend",
+    },
+    {
+        imageUrl: Php,
+        name: "PHP",
+        type: "Backend",
+    },{
+        imageUrl: Sql,
+        name: "SQL",
+        type: "Database",
+    },{
+        imageUrl: Vps,
+        name: "VPS",
+        type: "Virtual private server",
+    },
+    
 ];
 
 export const experiences = [
@@ -191,13 +230,21 @@ export const socialLinks = [
 
 export const projects = [
     {
+        iconUrl: Angel,
+        theme: 'btn-back-blue',
+        name: 'Angel Crafted Spirits',
+        description: `Angel Crafted Spirits : Développement d'un site web interactif et performant pour une entreprise de services de bartending, utilisant React, Three.js, Tailwind, GSAP et AOS. Le projet inclut des outils pour le calcul des prix, une optimisation SEO avancée, et une amélioration continue des performances, notamment pour les appareils mobiles. Hébergé sur un VPS Debian avec Nginx, Node.js et des services mail configurés via Postfix et Dovecot. Développement en cours d'une base de données avec PHP et SQL pour enrichir les fonctionnalités.`,
+        link: 'https://angelcraftedspirits.com/',
+        lien: 'https://github.com/rexjmn/angel-crafted-spirits'
+    },
+    {
         iconUrl: favicon,
         theme: 'btn-back-pink',
         name: 'Portfolio',
         description: `Ce projet a été conçu avec des technologies modernes telles que Three.js, drei, Fiber React, Vite, et GSAP. J’ai créé une expérience interactive mettant en scène une île flottante habitée par des renards et un avion qui parcourt l'île lorsque l'on clique dessus. De plus, un oiseau phénix ajoute une touche dynamique à cette scène immersive. 
         Pour réaliser ce projet, j'ai téléchargé des modèles 3D depuis Sketchfab, que j'ai intégrés dans mon application à l'aide de Three.js, permettant ainsi l'utilisation de WebGL pour des rendus graphiques avancés. Les animations sont fluides grâce à GSAP, ce qui améliore l'expérience utilisateur.`,
-        link: 'https://github.com/rexjmn/Myportfoilio',
-        lien: 'https://myportfoilionn.onrender.com/'
+        lien: 'https://github.com/rexjmn/Myportfoilio',
+        link: 'https://myportfoilionn.onrender.com/'
     },
     {
         iconUrl: sushi,
