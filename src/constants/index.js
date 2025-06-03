@@ -33,6 +33,10 @@ import {
     task,
     adventure,
     favicon,
+    symfony,
+    jira,
+    docker,
+    cicd,
 } from "../assets/icons";
 
 export const skills = [
@@ -149,10 +153,26 @@ export const skills = [
         imageUrl: Sql,
         name: "SQL",
         type: "Database",
-    },{
-        imageUrl: Vps,
-        name: "VPS",
-        type: "Virtual private server",
+    },
+    {
+        imageUrl: jira,
+        name: "Jira",
+        type: "Project Management",
+    },
+    {
+        imageUrl: symfony,
+        name: "Symfony",
+        type: "Backend",
+    },
+    {
+        imageUrl: docker,
+        name: "Docker",
+        type: "Containerization",
+    },
+    {
+        imageUrl: cicd,
+        name: "CI/CD",
+        type: "DevOps",
     },
     
 ];

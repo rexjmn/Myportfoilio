@@ -11,7 +11,7 @@ const Projects = () => {
   const projectsRef = useRef();
 
   useGSAP(() => {
-    // 🌸 ANIMACIÓN GLOBAL MÁGICA DE LA PÁGINA
+    
     gsap.fromTo('#magical-background', {
       opacity: 0,
       scale: 1.1
@@ -22,7 +22,7 @@ const Projects = () => {
       ease: "power2.out"
     });
 
-    // Pétalos y hojas flotantes mágicas
+   
     for (let i = 0; i < 15; i++) {
       gsap.to(`#floating-leaf-${i}`, {
         x: `random(-150, 150)`,
@@ -36,7 +36,7 @@ const Projects = () => {
       });
     }
 
-    // Luciérnagas mágicas
+    
     for (let i = 0; i < 8; i++) {
       gsap.to(`#firefly-${i}`, {
         x: `random(-200, 200)`,
@@ -48,7 +48,7 @@ const Projects = () => {
         delay: i * 0.4
       });
 
-      // Parpadeo de luciérnagas
+      
       gsap.to(`#firefly-${i}`, {
         opacity: `random(0.3, 1)`,
         duration: `random(1, 3)`,
@@ -59,7 +59,7 @@ const Projects = () => {
       });
     }
 
-    // Ondas mágicas
+    
     gsap.to('.water-ripple', {
       scale: 3,
       opacity: 0,
@@ -69,7 +69,7 @@ const Projects = () => {
       ease: "power2.out"
     });
 
-    // 🌺 TEXTO PRINCIPAL CON MAGIA
+    
     gsap.set("#head-text", { opacity: 0, y: 50 });
     gsap.to("#head-text", {
       opacity: 1,
@@ -79,7 +79,7 @@ const Projects = () => {
       delay: 0.5
     });
 
-    // Efecto de aurora en "Projets"
+    
     gsap.to("#projects-gradient", {
       backgroundPosition: "200% center",
       duration: 6,
@@ -87,7 +87,7 @@ const Projects = () => {
       ease: "none",
     });
 
-    // Descripción con entrada suave
+    
     gsap.fromTo("#description-text", 
       {
         opacity: 0,
@@ -98,13 +98,13 @@ const Projects = () => {
         opacity: 1,
         y: 0,
         filter: 'blur(0px)',
-        duration: 2,
+        duration: 1.,
         ease: "power3.out",
-        delay: 1.5,
+        delay: 1,
       }
     );
 
-    // 🎨 ANIMACIONES DE PROYECTOS
+   
     const projectCards = gsap.utils.toArray(projectsRef.current.children);
     projectCards.forEach((card, index) => {
       // Entrada como hojas que caen
@@ -120,7 +120,7 @@ const Projects = () => {
         rotation: 0,
         scale: 1,
         filter: 'blur(0px)',
-        duration: 1.5,
+        duration: 0.5,
         ease: "elastic.out(1, 0.8)",
         scrollTrigger: {
           trigger: card,
@@ -134,7 +134,7 @@ const Projects = () => {
 
   }, []);
 
-  // Composant CTA simple intégré
+  
   const CTA = () => (
     <div className="backdrop-blur-sm bg-white/40 rounded-2xl md:rounded-3xl p-6 md:p-12 border border-amber-200/50 hover:border-amber-300/70 transition-all duration-500 hover:shadow-xl hover:shadow-amber-200/20 transform hover:-translate-y-2 text-center">
       <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-green-600 to-blue-600">
@@ -156,7 +156,7 @@ const Projects = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* 🌲 FONDO MÁGICO DEL BOSQUE */}
+      
       <div 
         id="magical-background"
         className="fixed inset-0 pointer-events-none -z-10"
@@ -175,7 +175,7 @@ const Projects = () => {
           `
         }}
       >
-        {/* Hojas flotantes */}
+        
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
@@ -192,29 +192,29 @@ const Projects = () => {
           </div>
         ))}
 
-        {/* Luciérnagas mágicas */}
+        
         {[...Array(8)].map((_, i) => (
           <div
             key={i}
             id={`firefly-${i}`}
-            className="absolute w-1 h-1 md:w-2 md:h-2 rounded-full opacity-60 pointer-events-none"
+            className="absolute w-8 h-8 md:w-2 md:h-2 rounded-full opacity-60 pointer-events-none"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              background: 'radial-gradient(circle, #FFD700 0%, transparent 70%)',
+              background: 'radial-gradient(circle, #FFD700 0%, transparent 100%)',
               boxShadow: '0 0 8px #FFD700'
             }}
           ></div>
         ))}
 
-        {/* Ondas de agua mágica */}
+        
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 pointer-events-none">
           {[...Array(3)].map((_, i) => (
             <div
               key={i}
-              className="water-ripple absolute w-20 h-20 md:w-32 md:h-32 border-2 border-blue-300 rounded-full opacity-20"
+              className="water-ripple absolute w-42 h-42 md:w-32 md:h-32 border-2 border-blue-300 rounded-full opacity-80"
               style={{
-                bottom: '20px',
+                bottom: '450px',
                 left: '50%',
                 transform: 'translateX(-50%)',
                 animationDelay: `${i * 1}s`
@@ -223,7 +223,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Rayos de sol suaves */}
+       
         <div 
           className="absolute top-0 right-0 w-1/3 h-1/3 opacity-20 pointer-events-none"
           style={{
@@ -234,7 +234,7 @@ const Projects = () => {
       </div>
 
       <section className='max-container relative z-10 px-4 sm:px-6 lg:px-8 py-6 md:py-8'>
-        {/* 🦊 HEADER MÁGICO */}
+       
         <div className="text-center mb-8 md:mb-16 relative">
           <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 relative' id="head-text">
             <span className="text-amber-800">Mes</span>{" "}
@@ -309,7 +309,7 @@ const Projects = () => {
                   {project.description}
                 </p>
                 
-                {/* Enlaces mejorados */}
+                
                 <div className='flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4'>
                   <a
                     href={project.link}
@@ -341,7 +341,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Partículas mágicas en hover */}
+             
               <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 {[...Array(3)].map((_, i) => (
                   <div
@@ -359,7 +359,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* 🌈 SEPARATOR MÁGICO */}
+       
         <div className="flex justify-center items-center py-8 md:py-12">
           <div className="flex items-center gap-4 md:gap-6 w-full max-w-2xl">
             <div className="h-px bg-gradient-to-r from-transparent via-blue-400 to-purple-400 flex-1"></div>
@@ -380,7 +380,7 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* 🎨 ESTILOS MÁGICOS NATURALES */}
+      
       <style>{`
         @keyframes spin {
           from { transform: rotate(0deg); }

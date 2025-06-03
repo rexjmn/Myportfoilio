@@ -23,7 +23,7 @@ const About = () => {
   const sectionRef = useRef();
 
   useGSAP(() => {
-    // 🌸 ANIMACIÓN GLOBAL MÁGICA DE LA PÁGINA
+    // Animation globale d'apparition de la page
     gsap.fromTo('#magical-background', {
       opacity: 0,
       scale: 1.1
@@ -34,7 +34,7 @@ const About = () => {
       ease: "power2.out"
     });
 
-    // Pétalos y hojas flotantes mágicas - CORREGIDO PARA COINCIDIR CON EL JSX
+    // Animation des éléments flottants - corrigé pour correspondre au JSX
     for (let i = 0; i < 15; i++) {
       gsap.to(`#floating-leaf-${i}`, {
         x: `random(-150, 150)`,
@@ -48,7 +48,7 @@ const About = () => {
       });
     }
 
-    // Luciérnagas mágicas - CORREGIDO PARA COINCIDIR CON EL JSX
+    // Animation des lucioles - corrigé pour correspondre au JSX
     for (let i = 0; i < 8; i++) {
       gsap.to(`#firefly-${i}`, {
         x: `random(-200, 200)`,
@@ -60,7 +60,7 @@ const About = () => {
         delay: i * 0.4
       });
 
-      // Parpadeo de luciérnagas
+      // Effet de clignotement des lucioles
       gsap.to(`#firefly-${i}`, {
         opacity: `random(0.3, 1)`,
         duration: `random(1, 3)`,
@@ -71,7 +71,7 @@ const About = () => {
       });
     }
 
-    // Ondas mágicas en el agua
+    // Animation des ondulations d'eau
     gsap.to('.water-ripple', {
       scale: 3,
       opacity: 0,
@@ -81,12 +81,12 @@ const About = () => {
       ease: "power2.out"
     });
 
-    // 🦊 SKILLS SECTION ESTILO BOSQUE ENCANTADO
+    // Section des compétences avec animation naturelle
     const boxes = gsap.utils.toArray(
       scrollRef.current.children
     );
     boxes.forEach((box, index) => {
-      // Entrada como hojas que caen del árbol
+      // Animation d'entrée progressive
       gsap.fromTo(box, {
         opacity: 0,
         y: -200,
@@ -110,7 +110,7 @@ const About = () => {
         delay: index * 0.15,
       });
 
-      // Hover effects naturales y orgánicos
+      // Effets de survol interactifs
       box.addEventListener('mouseenter', () => {
         gsap.to(box, {
           scale: 1.3,
@@ -121,7 +121,7 @@ const About = () => {
           ease: "back.out(1.7)"
         });
 
-        // Efecto de hojas cayendo
+        // Effet d'éléments qui tombent
         gsap.fromTo(box.querySelector('.leaf-effect'), {
           scale: 0,
           opacity: 1,
@@ -147,7 +147,7 @@ const About = () => {
       });
     })
 
-    // 🌟 PERFIL FOTO MÁGICA COMO UN ZORRO - CON DELAY PARA ASEGURAR QUE EL DOM ESTÉ LISTO
+    // Animation de la photo de profil - avec délai pour s'assurer que le DOM est prêt
     setTimeout(() => {
       const profileContainer = document.getElementById('profile-container');
       if (profileContainer) {
@@ -170,7 +170,7 @@ const About = () => {
       }
     }, 100);
 
-    // Aura mágica flotante - CON VERIFICACIÓN
+    // Animation de l'aura flottante - avec vérification
     setTimeout(() => {
       const magicAuras = document.querySelectorAll('.magic-aura');
       if (magicAuras.length > 0) {
@@ -188,7 +188,7 @@ const About = () => {
       }
     }, 150);
 
-    // Levitación suave como flotando en la isla - CON VERIFICACIÓN Y DELAY
+    // Animation de lévitation douce - avec vérification et délai
     setTimeout(() => {
       const profileImage = document.getElementById('profile-image');
       if (profileImage) {
@@ -212,7 +212,7 @@ const About = () => {
       }
     }, 300);
 
-    // Partículas mágicas orbitando - CON VERIFICACIÓN
+    // Animation des particules en orbite - avec vérification
     setTimeout(() => {
       for (let i = 0; i < 8; i++) {
         const particle = document.getElementById(`magic-particle-${i}`);
@@ -228,16 +228,16 @@ const About = () => {
       }
     }, 200);
 
-    // 🦊 EFECTOS DE HOVER MÁGICOS - CON DELAY PARA ASEGURAR DOM LISTO
+    // Effets de survol interactifs - avec délai pour s'assurer que le DOM est prêt
     setTimeout(() => {
       const profileContainer = document.getElementById('profile-container');
       
       if (profileContainer) {
         profileContainer.addEventListener('mouseenter', () => {
-          // Verificar que el elemento existe antes de animar
+          // Vérifier que l'élément existe avant d'animer
           const profileImage = document.getElementById('profile-image');
           if (profileImage) {
-            // Transformación mágica principal
+            // Transformation principale
             gsap.to('#profile-image', {
               scale: 1.15,
               filter: 'brightness(1.3) contrast(1.2) saturate(1.5) drop-shadow(0 0 30px rgba(255, 165, 0, 0.6))',
@@ -246,7 +246,7 @@ const About = () => {
             });
           }
           
-          // Explosión de pétalos
+          // Animation d'explosion d'éléments
           for (let i = 0; i < 12; i++) {
             const petal = document.getElementById(`petal-${i}`);
             if (petal) {
@@ -267,7 +267,7 @@ const About = () => {
             }
           }
 
-          // Ondas mágicas
+          // Animation d'onde expansive
           const magicWave = document.getElementById('magic-wave');
           if (magicWave) {
             gsap.fromTo('#magic-wave', {
@@ -281,7 +281,7 @@ const About = () => {
             });
           }
 
-          // Brillo dorado
+          // Animation du reflet doré
           const goldenGlow = document.querySelector('.golden-glow');
           if (goldenGlow) {
             gsap.to('.golden-glow', {
@@ -294,10 +294,10 @@ const About = () => {
         });
 
         profileContainer.addEventListener('mouseleave', () => {
-          // Verificar que el elemento existe antes de animar
+          // Vérifier que l'élément existe avant d'animer
           const profileImage = document.getElementById('profile-image');
           if (profileImage) {
-            // Reset suave
+            // Reset progressif
             gsap.to('#profile-image', {
               scale: 1,
               filter: 'brightness(1) contrast(1) saturate(1) drop-shadow(0 0 0px rgba(255, 165, 0, 0))',
@@ -319,7 +319,7 @@ const About = () => {
       }
     }, 400);
 
-    // Efecto de brisa suave en todo momento - CON VERIFICACIÓN Y DELAY
+    // Effet de mouvement naturel continu - avec vérification et délai
     let breezeInterval;
     setTimeout(() => {
       breezeInterval = setInterval(() => {
@@ -336,14 +336,14 @@ const About = () => {
       }, 3000);
     }, 500);
 
-    // Cleanup del interval cuando el componente se desmonte
+    // Nettoyage de l'interval quand le composant se démonte
     return () => {
       if (breezeInterval) {
         clearInterval(breezeInterval);
       }
     };
 
-    // 🌺 TEXTO PRINCIPAL CON MAGIA
+    // Animation du texte principal
     gsap.set("#head-text", { opacity: 0, y: 50 });
     gsap.to("#head-text", {
       opacity: 1,
@@ -353,7 +353,7 @@ const About = () => {
       delay: 0.5
     });
 
-    // Efecto de aurora en el nombre
+    // Effet de dégradé animé sur le nom
     gsap.to("#name-gradient", {
       backgroundPosition: "200% center",
       duration: 6,
@@ -361,7 +361,7 @@ const About = () => {
       ease: "none",
     });
 
-    // Texto descriptivo con entrada suave
+    // Animation du texte descriptif
     gsap.fromTo("#description-text", 
       {
         opacity: 0,
@@ -378,7 +378,7 @@ const About = () => {
       }
     );
 
-    // 🍃 TIMELINE EXPERIENCIA NATURAL
+    // Animation de la timeline d'expérience
     gsap.fromTo('.vertical-timeline', {
       opacity: 0,
       x: -50
@@ -389,13 +389,13 @@ const About = () => {
       ease: "power3.out",
       scrollTrigger: {
         trigger: '.vertical-timeline',
-        start: "top 80%",
+        start: "top 95%",
       }
     });
 
   }, []);
 
-  // Composant CTA simple intégré - SOLO CONTACTO
+  // Composant Call-to-Action intégré - section contact uniquement
   const CTA = () => (
     <div className="backdrop-blur-sm bg-white/40 rounded-2xl md:rounded-3xl p-6 md:p-12 border border-amber-200/50 hover:border-amber-300/70 transition-all duration-500 hover:shadow-xl hover:shadow-amber-200/20 transform hover:-translate-y-2 text-center">
       <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-green-600 to-blue-600">
@@ -406,7 +406,7 @@ const About = () => {
       </p>
       <div className="flex justify-center">
         <a 
-          href="mailto:contact.sparlar@gmail.com"
+          href="/contact"
           className="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-green-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold hover:from-amber-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center max-w-xs"
         >
           ✉️ Me contacter
@@ -417,7 +417,7 @@ const About = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* 🌲 FONDO MÁGICO DEL BOSQUE */}
+      {/* Arrière-plan avec dégradés et effets visuels */}
       <div 
         id="magical-background"
         className="fixed inset-0 pointer-events-none -z-10"
@@ -436,16 +436,16 @@ const About = () => {
           `
         }}
       >
-        {/* Hojas flotantes - REDUCIDAS PARA MOBILE */}
+        {/* Éléments flottants décoratifs - optimisé pour mobile */}
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
             id={`floating-leaf-${i}`}
-            className="absolute opacity-40 pointer-events-none"
+            className="absolute opacity-20 pointer-events-none"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              fontSize: `${8 + Math.random() * 6}px`,
+              fontSize: `${8 + Math.random() * 20}px`,
               color: ['#8B4513', '#228B22', '#FF8C00', '#DAA520'][Math.floor(Math.random() * 4)]
             }}
           >
@@ -453,7 +453,7 @@ const About = () => {
           </div>
         ))}
 
-        {/* Luciérnagas mágicas - REDUCIDAS PARA MOBILE */}
+        {/* Points lumineux animés - optimisé pour mobile */}
         {[...Array(8)].map((_, i) => (
           <div
             key={i}
@@ -468,7 +468,7 @@ const About = () => {
           ></div>
         ))}
 
-        {/* Ondas de agua mágica */}
+        {/* Effets d'ondulation en bas de page */}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 pointer-events-none">
           {[...Array(3)].map((_, i) => (
             <div
@@ -484,7 +484,7 @@ const About = () => {
           ))}
         </div>
 
-        {/* Rayos de sol suaves */}
+        {/* Effet de lumière diffuse */}
         <div 
           className="absolute top-0 right-0 w-1/3 h-1/3 opacity-20 pointer-events-none"
           style={{
@@ -495,10 +495,10 @@ const About = () => {
       </div>
 
       <section className='max-container relative z-10 px-4 sm:px-6 lg:px-8 py-6 md:py-8'>
-        {/* 🦊 HEADER MÁGICO */}
+        {/* En-tête principal */}
         <div className="text-center mb-8 md:mb-16 relative">
           <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 relative' id="head-text">
-            <span className="text-amber-800">Bonjour, je m'appelle</span>{" "}
+            <span className="text-amber-800">Transformons vos idées en réalité numérique,</span>{" "}
             <br className="sm:hidden" />
             <span 
               className='font-bold text-transparent bg-clip-text relative inline-block' 
@@ -509,12 +509,12 @@ const About = () => {
                 textShadow: '0 0 20px rgba(255, 140, 0, 0.3)'
               }}
             >
-              René
+              Créateur d'expériences numériques sur mesure
             </span>{" "}
-            <span className="inline-block text-2xl sm:text-3xl md:text-4xl animate-bounce">👋</span>
+            <span className="inline-block text-2xl sm:text-3xl md:text-4xl animate-bounce">🧙🏼‍♂️</span>
           </h1>
 
-          {/* Decoración natural */}
+          {/* Séparateur décoratif */}
           <div className="flex justify-center items-center gap-4 mb-6 md:mb-8">
             <div className="h-px bg-gradient-to-r from-transparent via-amber-600 to-transparent flex-1 max-w-16 sm:max-w-32"></div>
             <div className="text-xl md:text-2xl">🦊</div>
@@ -526,7 +526,7 @@ const About = () => {
           <div className="flex-1 space-y-4 md:space-y-6 order-2 lg:order-1 w-full" id="description-text">
             <div className="backdrop-blur-sm bg-white/40 rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 border border-amber-200/50 hover:border-amber-300/70 transition-all duration-500 hover:shadow-xl hover:shadow-amber-200/20 transform hover:-translate-y-1">
               <p className="text-amber-900 leading-relaxed text-sm sm:text-base md:text-lg">
-                <span className="text-amber-700 font-semibold">🌟 Développeur Full-Stack</span> passionné, originaire du Salvador et vivant en France. Actuellement en formation à <span className="text-green-700 font-semibold">La Fabrique Numérique Paloise</span>, je vise le titre de <span className="text-blue-700 font-semibold">Concepteur Développeur d'Applications (CDA)</span>.
+                <span className="text-amber-700 font-semibold">🌟 René Jiménez, Développeur Full-Stack</span> passionné, originaire du Salvador et vivant en France. Actuellement en formation à <span className="text-green-700 font-semibold">La Fabrique Numérique Paloise</span>, je vise le titre de <span className="text-blue-700 font-semibold">Concepteur Développeur d'Applications (CDA)</span>.
               </p>
             </div>
             
@@ -549,7 +549,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* 🦊 PHOTO DE PROFIL PARFAITEMENT CENTRÉE */}
+          {/* Section photo de profil avec animation centrale */}
           <div className="flex-shrink-0 order-1 lg:order-2 w-full lg:w-auto mb-8 lg:mb-0">
             <div className="flex justify-center w-full px-4 sm:px-8 md:px-12 lg:px-0">
               <div 
@@ -557,10 +557,10 @@ const About = () => {
                 className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 cursor-pointer overflow-visible mx-auto"
                 style={{
                   filter: 'drop-shadow(0 10px 20px rgba(139, 69, 19, 0.2))',
-                  margin: '60px auto' // Espaciado extra para las animaciones
+                  margin: '60px auto' // Espace supplémentaire pour les animations
                 }}
               >
-                {/* Aura mágica de fondo */}
+                {/* Aura lumineuse de fond */}
                 <div 
                   className="magic-aura absolute inset-6 md:inset-8 rounded-full opacity-40"
                   style={{
@@ -569,7 +569,7 @@ const About = () => {
                   }}
                 ></div>
 
-                {/* Ondas mágicas */}
+                {/* Onde d'expansion au survol */}
                 <div 
                   id="magic-wave"
                   className="absolute inset-0 rounded-full border-2 border-gold opacity-0"
@@ -581,7 +581,7 @@ const About = () => {
                   }}
                 ></div>
 
-                {/* Partículas mágicas orbitando */}
+                {/* Particules en orbite autour de la photo */}
                 {[...Array(8)].map((_, i) => (
                   <div
                     key={i}
@@ -604,7 +604,7 @@ const About = () => {
                   </div>
                 ))}
 
-                {/* Pétalos para el efecto hover */}
+                {/* Éléments décoratifs pour l'effet de survol */}
                 {[...Array(12)].map((_, i) => (
                   <div
                     key={i}
@@ -620,7 +620,7 @@ const About = () => {
                   </div>
                 ))}
                 
-                {/* Resplandor dorado */}
+                {/* Effet de brillance doré */}
                 <div 
                   className="golden-glow absolute inset-8 md:inset-12 rounded-full opacity-40"
                   style={{
@@ -629,9 +629,9 @@ const About = () => {
                   }}
                 ></div>
 
-                {/* Contenedor principal de la imagen */}
+                {/* Conteneur principal de l'image */}
                 <div className="absolute inset-8 md:inset-12 rounded-full overflow-hidden border-2 md:border-4 border-white shadow-xl md:shadow-2xl relative bg-gradient-to-br from-orange-100 to-amber-50">
-                  {/* Efecto de cristal encantado */}
+                  {/* Effet de rotation décoratif */}
                   <div 
                     className="absolute inset-0 opacity-30 pointer-events-none"
                     style={{
@@ -656,7 +656,7 @@ const About = () => {
                   />
                 </div>
                 
-                {/* Luces de esquina mágicas */}
+                {/* Points lumineux aux angles */}
                 {[...Array(4)].map((_, i) => (
                   <div 
                     key={i}
@@ -673,7 +673,7 @@ const About = () => {
                   ></div>
                 ))}
 
-                {/* Texto flotante con tecnologías */}
+                {/* Texte descriptif flottant */}
                 <div 
                   className="absolute -bottom-12 md:-bottom-16 left-1/2 transform -translate-x-1/2 opacity-60 text-xs md:text-sm font-mono text-amber-700 text-center px-2"
                   style={{
@@ -687,11 +687,11 @@ const About = () => {
           </div>
         </div>
 
-        {/* 🍃 SKILLS SECTION BOSQUE ENCANTADO */}
+        {/* Section des compétences avec animation naturelle */}
         <div className='py-12 md:py-16'>
           <div className="text-center mb-8 md:mb-12">
             <h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-green-600 to-blue-600 mb-4 md:mb-6'>
-              🌟 Mes Compétences Magiques
+              🌟 Mes Compétences
             </h3>
             <div className="flex justify-center items-center gap-4">
               <div className="h-px bg-gradient-to-r from-transparent via-green-500 to-transparent flex-1 max-w-16 sm:max-w-32"></div>
@@ -709,17 +709,17 @@ const About = () => {
                   filter: 'drop-shadow(0 4px 8px rgba(139, 69, 19, 0.2))'
                 }}
               >
-                {/* Efecto de hojas cayendo */}
+                {/* Effet décoratif au survol */}
                 <div className="leaf-effect absolute inset-0 text-lg md:text-2xl flex items-center justify-center opacity-0">
                   🍃
                 </div>
                 
-                {/* Borde mágico */}
+                {/* Bordure avec dégradé */}
                 <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-r from-amber-300 via-green-300 to-blue-300 opacity-30 group-hover:opacity-70 transition-opacity duration-500"></div>
                 
                 <div className='btn-back rounded-xl md:rounded-2xl bg-amber-50/80 backdrop-blur-sm' />
                 <div className='btn-front rounded-xl md:rounded-2xl flex justify-center items-center bg-white/90 backdrop-blur-sm border border-amber-200 md:border-2 group-hover:border-amber-400 transition-all duration-500 relative overflow-hidden'>
-                  {/* Brillo dorado que pasa */}
+                  {/* Effet de brillance au passage */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-200/40 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                   
                   <img
@@ -729,10 +729,10 @@ const About = () => {
                   />
                 </div>
                 
-                {/* Tooltip encantado - POSICIÓN ARRIBA PERFECTA */}
+                {/* Infobulle de compétence - positionnement optimisé */}
                 <div className="absolute -top-12 sm:-top-14 md:-top-16 left-1/2 transform -translate-x-1/2 bg-amber-100 text-amber-800 px-2 md:px-3 py-1 md:py-2 rounded-lg text-xs md:text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 whitespace-nowrap border border-amber-300 shadow-lg z-50">
                   ✨ {skill.name}
-                  {/* Flecha hacia abajo */}
+                  {/* Flèche indicatrice */}
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 md:border-l-4 md:border-r-4 md:border-t-4 border-transparent border-t-amber-300"></div>
                 </div>
               </div>
@@ -740,7 +740,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* 🌲 EXPERIENCE SECTION NATURAL */}
+        {/* Section de l'expérience professionnelle */}
         <div className='py-12 md:py-20'>
           <div className="text-center mb-8 md:mb-16">
             <h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-amber-600 to-blue-600 mb-4 md:mb-6'>
@@ -779,7 +779,7 @@ const About = () => {
                           alt={experience.company_name}
                           className='w-[60%] h-[60%] object-contain'
                         />
-                        {/* Aura dorada alrededor del ícono */}
+                        {/* Aura colorée autour de l'icône */}
                         <div 
                           className="absolute inset-0 rounded-full opacity-40"
                           style={{
@@ -804,7 +804,7 @@ const About = () => {
                     }}
                   >
                     <div className="relative z-10">
-                      {/* Efecto de brillo sutil */}
+                      {/* Ligne décorative en haut */}
                       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 via-green-400 to-blue-400 opacity-60 rounded-t-full"></div>
                       
                       <h3 className='text-amber-800 text-base sm:text-lg md:text-xl font-bold mb-2 relative'>
@@ -829,9 +829,9 @@ const About = () => {
                       </ul>
                     </div>
                     
-                    {/* Decoración natural de fondo */}
-                    <div className="absolute top-2 right-2 text-lg md:text-2xl opacity-20">
-                      {['🌸', '🌿', '🦊', '✨'][index % 4]}
+                    {/* Élément décoratif dans le coin */}
+                    <div className="absolute top-2 right-2 text-xl md:text-2xl opacity-20">
+                      {['🌸', '🌿', '🦊', '✨'][index % 10]}
                     </div>
                   </VerticalTimelineElement>
                 ))}
@@ -840,7 +840,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* 🌈 SEPARATOR MÁGICO */}
+        {/* Séparateur décoratif */}
         <div className="flex justify-center items-center py-8 md:py-12">
           <div className="flex items-center gap-4 md:gap-6 w-full max-w-2xl">
             <div className="h-px bg-gradient-to-r from-transparent via-amber-400 to-green-400 flex-1"></div>
@@ -852,7 +852,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* CTA Section Enhanced con tema natural - SOLO CONTACTO */}
+        {/* Section Call-to-Action améliorée - contact uniquement */}
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-100/30 via-green-100/30 to-blue-100/30 rounded-2xl md:rounded-3xl blur-xl"></div>
           <div className="relative z-10">
@@ -861,7 +861,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* 🎨 ESTILOS MÁGICOS NATURALES */}
+      {/* Styles CSS personnalisés */}
       <style>{`
         @keyframes spin {
           from { transform: rotate(0deg); }
@@ -909,7 +909,7 @@ const About = () => {
             0 0 30px rgba(218, 165, 32, 0.1);
         }
 
-        /* Espaciado extra para el contenedor de la foto de perfil */
+        /* Espace supplémentaire pour le conteneur de la photo de profil */
         #profile-container {
           padding: 40px;
         }
@@ -921,7 +921,7 @@ const About = () => {
           }
         }
 
-        /* Asegurar que el navbar funcione */
+        /* S'assurer que la navigation fonctionne correctement */
         .header {
           position: relative;
           z-index: 9999 !important;
@@ -932,7 +932,7 @@ const About = () => {
           pointer-events: auto !important;
         }
 
-        /* Scrollbar natural */
+        /* Barre de défilement personnalisée */}
         ::-webkit-scrollbar {
           width: 6px;
         }
@@ -951,18 +951,18 @@ const About = () => {
           background: linear-gradient(to bottom, #FF8C00, #DAA520);
         }
 
-        /* Ajustes específicos para la clase max-container */
+        /* Ajustements pour la classe conteneur principal */}
         .max-container {
           max-width: 1200px;
           margin: 0 auto;
         }
 
-        /* Smooth scroll */
+        /* Défilement fluide */}
         html {
           scroll-behavior: smooth;
         }
 
-        /* Mejoras responsive adicionales */
+        /* Améliorations responsive supplémentaires */
         @media (max-width: 640px) {
           .vertical-timeline-element-date {
             font-size: 12px !important;

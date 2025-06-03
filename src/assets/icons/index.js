@@ -34,7 +34,10 @@ import gsap from "./gsap.svg";
 import three from "./three.svg";
 import vite from "./vite.svg";
 import favicon from "./favicon.ico";
-
+import jira from "./jira.webp";
+import symfony from "./symfony.png";
+import docker from "./docker.svg";
+import cicd from "./CICD.png";
 export {
     css,
     express,
@@ -71,5 +74,9 @@ export {
     gsap,    
     three,
     vite,
-    favicon
+    favicon,
+    jira, 
+    symfony,
+    docker,
+    cicd
 }

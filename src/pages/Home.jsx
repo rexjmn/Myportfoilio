@@ -57,6 +57,23 @@ const Home = () => {
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
 
+  // Solo manejo mínimo del Context Lost
+  const handleCreated = ({ gl }) => {
+    const canvas = gl.domElement;
+    
+    const handleContextLost = (event) => {
+      event.preventDefault();
+      console.log('WebGL context lost, attempting recovery...');
+    };
+    
+    const handleContextRestored = () => {
+      console.log('WebGL context restored');
+    };
+    
+    canvas.addEventListener('webglcontextlost', handleContextLost, false);
+    canvas.addEventListener('webglcontextrestored', handleContextRestored, false);
+  };
+
   return (
     <section className='w-full h-screen relative'>
       <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
@@ -68,6 +85,7 @@ const Home = () => {
           isRotating ? "cursor-grabbing" : "cursor-grab"
         }`}
         camera={{ near: 0.1, far: 1000 }}
+        onCreated={handleCreated}
       >
         <Suspense fallback={<Loader />}>
           <directionalLight position={[1, 1, 1]} intensity={2} />
