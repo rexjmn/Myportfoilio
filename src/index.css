@@ -186,3 +186,90 @@ body:has(.card[data-color="green"]:hover) {
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
+/* Actualiza tu index.css - Agrega estas clases para la nueva navbar */
+
+/* Layout adjustments para navbar fija */
+body {
+  padding-top: 80px; /* Espacio para navbar fija */
+}
+
+@media (min-width: 640px) {
+  body {
+    padding-top: 100px; /* Más espacio en pantallas grandes */
+  }
+}
+
+/* Navbar base styles (si no existen ya) */
+.header {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Mejoras adicionales para glassmorphism */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Animaciones personalizadas para partículas */
+@keyframes float-particle {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg); 
+  }
+  25% { 
+    transform: translateY(-8px) translateX(5px) rotate(90deg); 
+  }
+  50% { 
+    transform: translateY(-15px) translateX(-5px) rotate(180deg); 
+  }
+  75% { 
+    transform: translateY(-8px) translateX(8px) rotate(270deg); 
+  }
+}
+
+.float-particle {
+  animation: float-particle 6s ease-in-out infinite;
+}
+
+/* Efecto de brillo mejorado */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.group:hover .shimmer {
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  /* En móviles, hacer navbar más compacta */
+  .navbar-mobile {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Logo más pequeño en móvil */
+  .navbar-mobile .logo {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* Smooth transitions para toda la app */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Asegurar que el contenido principal no se oculte detrás de navbar */
+main, section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Efecto de profundidad para navbar */
+.navbar-depth {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 20px rgba(245, 158, 11, 0.1);
+}
